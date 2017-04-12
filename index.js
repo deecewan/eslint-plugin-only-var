@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   rules: {
     'only-var': {
@@ -6,6 +8,11 @@ module.exports = {
       },
       create(context) {
         const sourceCode = context.getSourceCode();
+        const ignore = context.options ? context.options[0].ignore || [] : [];
+        const extension = path.extname(context.getFilename());
+        console.log(extension);
+        console.log(ignore);
+        if (ignore.indexOf(extension) > -1) { return {}; }
         return {
           VariableDeclaration(node) {
             if (node.kind !== 'var') {

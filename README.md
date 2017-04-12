@@ -24,3 +24,18 @@ yarn add -D eslint-plugin-only-var
   }
 }
 ```
+
+If you want to ignore certain files, you can specify their extensions like so:
+
+```js
+// .eslintrc
+{
+  // ...
+  "plugins": [
+    "only-var"
+  ],
+  "rules": {
+    "only-var/only-var": ["error", { "ignore": [".jsx"] }]
+  }
+}
+```

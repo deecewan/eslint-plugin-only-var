@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "author": "David Buchan-Swanson <david.buchanswanson@gmail.com>",
+  "keywords": [
+    "eslint", "eslintplugin"
+  ],
   "scripts": {
     "test": "node ./test"
   },
