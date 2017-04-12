@@ -8,7 +8,7 @@ module.exports = {
       },
       create(context) {
         const sourceCode = context.getSourceCode();
-        const ignore = context.options ? context.options[0].ignore || [] : [];
+        const ignore = context.options.length > 0 ? context.options[0].ignore || [] : [];
         const extension = path.extname(context.getFilename());
         if (ignore.indexOf(extension) > -1) { return {}; }
         return {

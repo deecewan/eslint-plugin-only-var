@@ -13,7 +13,8 @@
     "eslintplugin"
   ],
   "scripts": {
-    "test": "node ./test"
+    "test": "node ./test",
+    "prepublish": "yarn test"
   },
   "devDependencies": {
     "eslint": "^3.13.1"
